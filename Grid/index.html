@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Grid</title>
+</head>
+<body>
+    <style>
+        .grid-container{
+            color: white;
+            height: 100%;
+            width: 100%;
+            background-color: #eee;
+            display: grid; 
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: 150px;
+            /* position: relative; */
+            /* grid-template-columns: repeat(3, 1fr); */
+        }
+        .grid-item{
+            background: rgb(37, 18, 18);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px; 
+            /* position: relative; */
+        }
+        .grid-item-seven{
+           position: relative;
+        }
+        .grid-item-seven div {
+            background-color: sienna;
+            padding: 20px;
+            position: absolute;
+            margin-right: -10px;
+        }
+    </style>
+
+    <div class="grid-container">
+        <div class="grid-item-one grid-item">Grid Item 1  </div>
+        <div class="grid-item-two grid-item">Grid Item 2 </div>
+        <div class="grid-item-three grid-item">Grid Item 3</div>
+        <div class="grid-item-four grid-item">Grid Item 4</div>
+        <div class="grid-item-five grid-item">Grid Item 5</div>
+        <div class="grid-item-six grid-item">Grid Item 6</div>
+        <div class="grid-item-seven grid-item">
+            <div>Grid Item 7</div> 
+        </div>
+        <div class="grid-item-eight grid-item">Grid Item 8</div>
+ 
+    </div>
+    
+</body>
+</html>
